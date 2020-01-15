@@ -1,12 +1,8 @@
 
 const handTransformer = require('./hand-transformer');
+const getFlushSuit = require('./get-flush-suit');
+const getStraightHighCard = require('./get-straight-high-card');
 
-const getFlushSuit = () => {
-  throw new Error('wip');
-};
-const getStraightHighCard = () => {
-  throw new Error('wip');
-};
 const getFourOfKindRank = () => {
   throw new Error('wip');
 };
