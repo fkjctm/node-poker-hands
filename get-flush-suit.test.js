@@ -10,14 +10,22 @@ describe('getFlushSuit', () => {
   test('for a non-flush hand, expect null', () => {
     const fourOfClubs = cards.filter(c => c.key === '4c')[0];
 
-    const handObj = { cards: [eightOfDiamonds, nineOfDiamonds, tenOfDiamonds, jackOfDiamonds, fourOfClubs]};
+    const handObj = {
+      cards: [eightOfDiamonds, nineOfDiamonds, tenOfDiamonds, jackOfDiamonds, fourOfClubs],
+      suitArray: [0, 0, 1, 4],
+      rankArray: [0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0]
+    };
     expect(getFlushSuit(handObj)).toBeNull();
   });
 
   test('for a flush hand, expect suit returned', () => {
     const queenOfDiamonds = cards.filter(c => c.key === 'Qd')[0];
 
-    const handObj = { cards: [eightOfDiamonds, nineOfDiamonds, tenOfDiamonds, jackOfDiamonds, queenOfDiamonds]};
+    const handObj = {
+      cards: [eightOfDiamonds, nineOfDiamonds, tenOfDiamonds, jackOfDiamonds, queenOfDiamonds],
+      suitArray: [0, 0, 0, 5],
+      rankArray: [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0]
+    };
     expect(getFlushSuit(handObj)).toBe('Diamonds');
   });
 });

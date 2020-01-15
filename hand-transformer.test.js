@@ -23,6 +23,8 @@ describe('handTransformer', () => {
 
     expect(result.cards.length).toBe(1);
     expect(result.cards[0]).toBe(expectedCard);
+    expect(result.suitArray).toEqual([0, 0, 0, 1]);
+    expect(result.rankArray).toEqual([0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0]);
   });
 
   test('expect multi-card string to return correct card array', () => {
@@ -33,6 +35,8 @@ describe('handTransformer', () => {
     expect(result.cards.length).toBe(2);
     expect(result.cards).toContain(eightOfClubs);
     expect(result.cards).toContain(aceOfSpades);
+    expect(result.suitArray).toEqual([1, 0, 1, 0]);
+    expect(result.rankArray).toEqual([0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1]);
   });
 
 });

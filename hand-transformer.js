@@ -7,14 +7,24 @@ const handTransformer = (hand) => {
   const cardStrings = parsedHand.split(' ');
   if(cardStrings.length > 5) throw new Error('Hand should only contain five cards');
   const cardArr = [];
+  const rankArr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  const suitArr = [0, 0, 0, 0];
   cardStrings.forEach(cs => {
     if (cards.some(c => c.key === cs)) {
-      cardArr.push(cards.filter(c => c.key === cs)[0]);
+      const foundCard = cards.filter(c => c.key === cs)[0];
+      rankArr[foundCard.rankValue - 1]++;
+      suitArr[foundCard.suitValue - 1]++;
+      cardArr.push(foundCard);
     }
   });
   if(cardArr.length !== cardStrings.length) throw new Error('Invalid card detected');
 
-  return { cards: cardArr };
+  const sortedCards = cardArr.sort((c1, c2) => {
+    if(c1.cardRank === c2.cardRank) return 0;
+    return c2.cardRank > c1.cardRank ? 1 : -1;
+  });
+
+  return { cards: sortedCards, rankArray: rankArr, suitArray: suitArr };
 
 };
 

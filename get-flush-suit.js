@@ -1,11 +1,9 @@
 
 const getFlushSuit = (hand) => {
-  let flushSuit = null;
-  ['Spade', 'Heart', 'Club', 'Diamond'].forEach(suit => {
-    const suitCount = hand.cards.filter(c => c.suit === suit).length;
-    if(suitCount > 4) flushSuit = suit;
-  });
-  return !!flushSuit ? `${flushSuit}s` : null;
+  if(!hand.suitArray.some(n => n === 5)) {
+    return null; // no flush
+  }
+  return `${hand.cards[0].suit}s`;
 };
 
 module.exports = getFlushSuit;
