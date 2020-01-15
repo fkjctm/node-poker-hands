@@ -1,7 +1,6 @@
 
-const handTransformer = () => {
-  throw new Error('wip');
-};
+const handTransformer = require('./hand-transformer');
+
 const getFlushSuit = () => {
   throw new Error('wip');
 };

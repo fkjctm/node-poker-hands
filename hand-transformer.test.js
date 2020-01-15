@@ -13,6 +13,10 @@ describe('handTransformer', () => {
     expect(() => handTransformer('Ts 7x')).toThrow('Invalid card detected');
   });
 
+  test('if the hand string contains more than 5 cards, expect error', () => {
+    expect(() => handTransformer('Ts 7c 9d 2h Ah 4c')).toThrow('Hand should only contain five cards');
+  });
+
   test('valid single card string should return correct card array', () => {
     const result = handTransformer(' Jd ');
     const expectedCard = cards.filter(c => c.key === 'Jd')[0];
