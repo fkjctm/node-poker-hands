@@ -30,13 +30,9 @@ const pokerHandParser = (hand, helperFns) => {
     handTransformer, getFlushSuit, getStraightHighCard, getFourOfKindRank, getFullHouseRanks,
     getFlushRank, getThreeOfKindRank, getTwoPairRanks, getOnePairRank, getHighCardRank
   };
-  console.log('hand', hand);
   const transformedHand = helpers.handTransformer(hand);
-  console.log('transformedHand', transformedHand);
   const flushSuit = helpers.getFlushSuit(transformedHand);
-  console.log('flushSuit', flushSuit);
   const straightHighCard = helpers.getStraightHighCard(transformedHand);
-  console.log('straightHighCard', straightHighCard);
 
   if(flushSuit !== null && straightHighCard === 'Ace') {
     return `Royal Flush: ${flushSuit}`;

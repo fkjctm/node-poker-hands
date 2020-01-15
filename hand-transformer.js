@@ -20,8 +20,8 @@ const handTransformer = (hand) => {
   if(cardArr.length !== cardStrings.length) throw new Error('Invalid card detected');
 
   const sortedCards = cardArr.sort((c1, c2) => {
-    if(c1.cardRank === c2.cardRank) return 0;
-    return c2.cardRank > c1.cardRank ? 1 : -1;
+    if(c1.rankValue === c2.rankValue) return 0;
+    return c2.rankValue > c1.rankValue ? 1 : -1;
   });
 
   return { cards: sortedCards, rankArray: rankArr, suitArray: suitArr };
