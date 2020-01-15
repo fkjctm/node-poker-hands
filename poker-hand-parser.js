@@ -30,16 +30,13 @@ const pokerHandParser = (hand, helperFns) => {
     handTransformer, getFlushSuit, getStraightHighCard, getFourOfKindRank, getFullHouseRanks,
     getFlushRank, getThreeOfKindRank, getTwoPairRanks, getOnePairRank, getHighCardRank
   };
+  console.log('hand', hand);
   const transformedHand = helpers.handTransformer(hand);
+  console.log('transformedHand', transformedHand);
   const flushSuit = helpers.getFlushSuit(transformedHand);
+  console.log('flushSuit', flushSuit);
   const straightHighCard = helpers.getStraightHighCard(transformedHand);
-  const fourOfKindRank = helpers.getFourOfKindRank(transformedHand);
-  const fullHouseRanks = helpers.getFullHouseRanks(transformedHand);
-  const flushRank = helpers.getFlushRank(transformedHand);
-  const threeOfKindRank = helpers.getThreeOfKindRank(transformedHand);
-  const twoPairRanks = helpers.getTwoPairRanks(transformedHand);
-  const onePairRank = helpers.getOnePairRank(transformedHand);
-  const highCardRank = helpers.getHighCardRank(transformedHand);
+  console.log('straightHighCard', straightHighCard);
 
   if(flushSuit !== null && straightHighCard === 'Ace') {
     return `Royal Flush: ${flushSuit}`;
@@ -49,14 +46,17 @@ const pokerHandParser = (hand, helperFns) => {
     return `Straight Flush: ${flushSuit}, ${straightHighCard} High`;
   }
 
+  const fourOfKindRank = helpers.getFourOfKindRank(transformedHand);
   if(fourOfKindRank) {
     return `Four of a Kind: ${fourOfKindRank}`;
   }
 
+  const fullHouseRanks = helpers.getFullHouseRanks(transformedHand);
   if(fullHouseRanks) {
     return `Full House: ${fullHouseRanks}`;
   }
 
+  const flushRank = helpers.getFlushRank(transformedHand);
   if(flushSuit) {
     return `Flush: ${flushSuit}, ${flushRank} High`;
   }
@@ -65,18 +65,22 @@ const pokerHandParser = (hand, helperFns) => {
     return `Straight: ${straightHighCard} High`;
   }
 
+  const threeOfKindRank = helpers.getThreeOfKindRank(transformedHand);
   if(threeOfKindRank) {
     return `Three of a Kind: ${threeOfKindRank}`;
   }
 
+  const twoPairRanks = helpers.getTwoPairRanks(transformedHand);
   if(twoPairRanks) {
     return `Two Pair: ${twoPairRanks}`;
   }
 
+  const onePairRank = helpers.getOnePairRank(transformedHand);
   if(onePairRank) {
     return `One Pair: ${onePairRank}`;
   }
 
+  const highCardRank = helpers.getHighCardRank(transformedHand);
   return `High Card: ${highCardRank}`;
 };
 
