@@ -7,10 +7,8 @@ const getFullHouseRanks = require('./get-full-house-ranks');
 const getFlushRank = require('./get-flush-rank');
 const getThreeOfKindRank = require('./get-three-of-kind-rank');
 const getTwoPairRanks = require('./get-two-pair-ranks');
+const getOnePairRank = require('./get-one-pair-rank');
 
-const getOnePairRank = () => {
-  throw new Error('wip');
-};
 const getHighCardRank = () => {
   throw new Error('wip');
 };

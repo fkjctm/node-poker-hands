@@ -1,9 +1,6 @@
 const pokerHandParser = require('./poker-hand-parser');
 
 describe('pokerHandParser integration tests', () => {
-  // f("As Kd 8c 9d 2c") -> "High Card: Ace"
-  // f("2c 6d Td Tc Js") -> "One Pair: Tens"
-  // f("9c 7d 9d 7h 2c") -> "Two Pair: Nines, Sevens"
 
   test('royal flush test', () => {
     expect(pokerHandParser('Jc Ac Kc Tc Qc')).toBe('Royal Flush: Clubs');
@@ -37,4 +34,9 @@ describe('pokerHandParser integration tests', () => {
     expect(pokerHandParser('9c 7d 9d 7h 2c')).toBe('Two Pair: Nines and Sevens');
   });
 
+  test('one pair test', () => {
+    expect(pokerHandParser('2c 6d Td Tc Js')).toBe('One Pair: Tens');
+  });
+
+  // f("As Kd 8c 9d 2c") -> "High Card: Ace"
 });
