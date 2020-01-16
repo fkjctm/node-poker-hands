@@ -4,10 +4,8 @@ const getFlushSuit = require('./get-flush-suit');
 const getStraightHighCard = require('./get-straight-high-card');
 const getFourOfKindRank = require('./get-four-of-kind-rank');
 const getFullHouseRanks = require('./get-full-house-ranks');
+const getFlushRank = require('./get-flush-rank');
 
-const getFlushRank = () => {
-  throw new Error('wip');
-};
 const getThreeOfKindRank = () => {
   throw new Error('wip');
 };
@@ -30,11 +28,11 @@ const pokerHandParser = (hand, helperFns) => {
   const flushSuit = helpers.getFlushSuit(transformedHand);
   const straightHighCard = helpers.getStraightHighCard(transformedHand);
 
-  if(flushSuit !== null && straightHighCard === 'Ace') {
+  if(flushSuit && straightHighCard === 'Ace') {
     return `Royal Flush: ${flushSuit}`;
   }
 
-  if(flushSuit !== null && straightHighCard !== null) {
+  if(flushSuit && straightHighCard) {
     return `Straight Flush: ${flushSuit}, ${straightHighCard} High`;
   }
 

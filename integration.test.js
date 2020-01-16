@@ -23,4 +23,8 @@ describe('pokerHandParser integration tests', () => {
   test('full house test', () => {
     expect(pokerHandParser('2c 2d 2s Td Tc')).toBe('Full House: Deuces over Tens');
   });
+
+  test('flush test', () => {
+    expect(pokerHandParser('9h 3h Qh Jh 6h')).toBe('Flush: Hearts, Queen High');
+  });
 });
