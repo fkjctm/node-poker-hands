@@ -5,10 +5,8 @@ const getStraightHighCard = require('./get-straight-high-card');
 const getFourOfKindRank = require('./get-four-of-kind-rank');
 const getFullHouseRanks = require('./get-full-house-ranks');
 const getFlushRank = require('./get-flush-rank');
+const getThreeOfKindRank = require('./get-three-of-kind-rank');
 
-const getThreeOfKindRank = () => {
-  throw new Error('wip');
-};
 const getTwoPairRanks = () => {
   throw new Error('wip');
 };
