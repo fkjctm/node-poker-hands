@@ -5,7 +5,7 @@ const getFourOfKindRank = (hand) => {
     return null;
   }
   const rankValue = hand.rankArray.indexOf(4) + 1;
-  const rank = cards.filter(c => c.rankValue === rankValue)[0].rank;
+  const rank = cards.find(c => c.rankValue === rankValue).rank;
   return `${rank}s`;
 };
 

@@ -11,7 +11,7 @@ const handTransformer = (hand) => {
   const suitArr = [0, 0, 0, 0];
   cardStrings.forEach(cs => {
     if (cards.some(c => c.key === cs)) {
-      const foundCard = cards.filter(c => c.key === cs)[0];
+      const foundCard = cards.find(c => c.key === cs);
       rankArr[foundCard.rankValue - 1]++;
       suitArr[foundCard.suitValue - 1]++;
       cardArr.push(foundCard);
@@ -25,7 +25,6 @@ const handTransformer = (hand) => {
   });
 
   return { cards: sortedCards, rankArray: rankArr, suitArray: suitArr };
-
 };
 
 module.exports = handTransformer;

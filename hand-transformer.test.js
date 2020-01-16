@@ -19,7 +19,7 @@ describe('handTransformer', () => {
 
   test('valid single card string should return correct card array', () => {
     const result = handTransformer(' Jd ');
-    const expectedCard = cards.filter(c => c.key === 'Jd')[0];
+    const expectedCard = cards.find(c => c.key === 'Jd');
 
     expect(result.cards.length).toBe(1);
     expect(result.cards[0]).toBe(expectedCard);
@@ -29,8 +29,8 @@ describe('handTransformer', () => {
 
   test('expect multi-card string to return correct card array', () => {
     const result = handTransformer('8c As');
-    const eightOfClubs = cards.filter(c => c.key === '8c')[0];
-    const aceOfSpades = cards.filter(c => c.key === 'As')[0];
+    const eightOfClubs = cards.find(c => c.key === '8c');
+    const aceOfSpades = cards.find(c => c.key === 'As');
 
     expect(result.cards.length).toBe(2);
     expect(result.cards).toContain(eightOfClubs);

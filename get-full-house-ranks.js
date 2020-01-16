@@ -9,8 +9,8 @@ const getFullHouseRanks = (hand) => {
   }
   const threeOfKindRank = hand.rankArray.indexOf(3) + 1;
   const pairRank = hand.rankArray.indexOf(2) + 1;
-  const threeOfKindRankString = cards.filter(x => x.rankValue === threeOfKindRank)[0].rank;
-  const pairRankString = cards.filter(x => x.rankValue === pairRank)[0].rank;
+  const threeOfKindRankString = cards.find(x => x.rankValue === threeOfKindRank).rank;
+  const pairRankString = cards.find(x => x.rankValue === pairRank).rank;
   return `${threeOfKindRankString}s over ${pairRankString}s`;
 };
 
