@@ -24,6 +24,6 @@ describe('getFullHouseRanks', () => {
       rankArray: [0, 2, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0],
       suitArray: [2, 1, 2, 0]
     };
-    expect(getFullHouseRanks(hand)).toBe('Eights over Tres');
+    expect(getFullHouseRanks(hand)).toBe('Eights over Threes');
   });
 });

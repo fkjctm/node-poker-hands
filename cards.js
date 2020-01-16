@@ -1,6 +1,6 @@
 const cards = [
   { key: '2s', rankValue: 1, suitValue: 1, rank: 'Deuce', suit: 'Spade' },
-  { key: '3s', rankValue: 2, suitValue: 1, rank: 'Tre', suit: 'Spade' },
+  { key: '3s', rankValue: 2, suitValue: 1, rank: 'Three', suit: 'Spade' },
   { key: '4s', rankValue: 3, suitValue: 1, rank: 'Four', suit: 'Spade' },
   { key: '5s', rankValue: 4, suitValue: 1, rank: 'Five', suit: 'Spade' },
   { key: '6s', rankValue: 5, suitValue: 1, rank: 'Six', suit: 'Spade' },
@@ -14,7 +14,7 @@ const cards = [
   { key: 'As', rankValue: 13, suitValue: 1, rank: 'Ace', suit: 'Spade' },
 
   { key: '2h', rankValue: 1, suitValue: 2, rank: 'Deuce', suit: 'Heart' },
-  { key: '3h', rankValue: 2, suitValue: 2, rank: 'Tre', suit: 'Heart' },
+  { key: '3h', rankValue: 2, suitValue: 2, rank: 'Three', suit: 'Heart' },
   { key: '4h', rankValue: 3, suitValue: 2, rank: 'Four', suit: 'Heart' },
   { key: '5h', rankValue: 4, suitValue: 2, rank: 'Five', suit: 'Heart' },
   { key: '6h', rankValue: 5, suitValue: 2, rank: 'Six', suit: 'Heart' },
@@ -28,7 +28,7 @@ const cards = [
   { key: 'Ah', rankValue: 13, suitValue: 2, rank: 'Ace', suit: 'Heart' },
 
   { key: '2c', rankValue: 1, suitValue: 3, rank: 'Deuce', suit: 'Club' },
-  { key: '3c', rankValue: 2, suitValue: 3, rank: 'Tre', suit: 'Club' },
+  { key: '3c', rankValue: 2, suitValue: 3, rank: 'Three', suit: 'Club' },
   { key: '4c', rankValue: 3, suitValue: 3, rank: 'Four', suit: 'Club' },
   { key: '5c', rankValue: 4, suitValue: 3, rank: 'Five', suit: 'Club' },
   { key: '6c', rankValue: 5, suitValue: 3, rank: 'Six', suit: 'Club' },
@@ -42,7 +42,7 @@ const cards = [
   { key: 'Ac', rankValue: 13, suitValue: 3, rank: 'Ace', suit: 'Club' },
 
   { key: '2d', rankValue: 1, suitValue: 4, rank: 'Deuce', suit: 'Diamond' },
-  { key: '3d', rankValue: 2, suitValue: 4, rank: 'Tre', suit: 'Diamond' },
+  { key: '3d', rankValue: 2, suitValue: 4, rank: 'Three', suit: 'Diamond' },
   { key: '4d', rankValue: 3, suitValue: 4, rank: 'Four', suit: 'Diamond' },
   { key: '5d', rankValue: 4, suitValue: 4, rank: 'Five', suit: 'Diamond' },
   { key: '6d', rankValue: 5, suitValue: 4, rank: 'Six', suit: 'Diamond' },
