@@ -3,10 +3,8 @@ const handTransformer = require('./hand-transformer');
 const getFlushSuit = require('./get-flush-suit');
 const getStraightHighCard = require('./get-straight-high-card');
 const getFourOfKindRank = require('./get-four-of-kind-rank');
+const getFullHouseRanks = require('./get-full-house-ranks');
 
-const getFullHouseRanks = () => {
-  throw new Error('wip');
-};
 const getFlushRank = () => {
   throw new Error('wip');
 };

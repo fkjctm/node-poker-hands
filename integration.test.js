@@ -7,7 +7,6 @@ describe('pokerHandParser integration tests', () => {
   // f("Qs Th Qc Qd 8h") -> "Three of a Kind: Queens"
   // f("6h 3c 5d 4s 7h") -> "Straight: Seven High"
   // f("9h 3h Qh Jh 6h") -> "Flush: Hearts, Queen High"
-  // f("2c 2d 2s Td Tc") -> "Full House: Deuces over Tens"
 
   test('royal flush test', () => {
     expect(pokerHandParser('Jc Ac Kc Tc Qc')).toBe('Royal Flush: Clubs');
@@ -19,5 +18,9 @@ describe('pokerHandParser integration tests', () => {
 
   test('four of a kind test', () => {
     expect(pokerHandParser('Jh 8s Js Jd Jc')).toBe('Four of a Kind: Jacks');
+  });
+
+  test('full house test', () => {
+    expect(pokerHandParser('2c 2d 2s Td Tc')).toBe('Full House: Deuces over Tens');
   });
 });
