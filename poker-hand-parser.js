@@ -1,4 +1,3 @@
-
 const handTransformer = require('./hand-transformer');
 const getFlushSuit = require('./get-flush-suit');
 const getStraightHighCard = require('./get-straight-high-card');
@@ -8,10 +7,7 @@ const getFlushRank = require('./get-flush-rank');
 const getThreeOfKindRank = require('./get-three-of-kind-rank');
 const getTwoPairRanks = require('./get-two-pair-ranks');
 const getOnePairRank = require('./get-one-pair-rank');
-
-const getHighCardRank = () => {
-  throw new Error('wip');
-};
+const getHighCardRank = require('./get-high-card-rank');
 
 const pokerHandParser = (hand, helperFns) => {
   const helpers = helperFns || {
