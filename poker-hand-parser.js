@@ -2,10 +2,8 @@
 const handTransformer = require('./hand-transformer');
 const getFlushSuit = require('./get-flush-suit');
 const getStraightHighCard = require('./get-straight-high-card');
+const getFourOfKindRank = require('./get-four-of-kind-rank');
 
-const getFourOfKindRank = () => {
-  throw new Error('wip');
-};
 const getFullHouseRanks = () => {
   throw new Error('wip');
 };
