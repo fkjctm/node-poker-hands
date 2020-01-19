@@ -31,4 +31,8 @@ Source: [Poker hand rankings](https://www.cardplayer.com/rules-of-poker/hand-ran
 
 # Installation and Operation
 
-After cloning the repo, do an `npm install` to install jest. To run the unit tests use `npm run test`. There is also a random hand script that can be run with `node randoms-hand.js N`. with `N` being the number of hands to run.
+
+
+After cloning the repo, do an `npm install` to install jest. To run the unit tests use `npm run test`.
+
+You can also test the hand optimizer by running `npm run build` to compile the project to a `dist` folder. You can then run `node ./dist/src/find-best-hand.js "Ad Kc 2s 8c Kd Ah 3h 9h 7c..."` to get the best hand description along with the hand score.
