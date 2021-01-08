@@ -11,10 +11,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/jest": "^24.9.0",
-    "@types/node": "^13.1.8",
+    "@types/jest": "^24.9.1",
+    "@types/node": "^13.13.39",
     "jest": "^24.9.0",
     "ts-jest": "^24.3.0",
-    "typescript": "^3.7.5"
+    "typescript": "^3.9.7"
   }
 }
